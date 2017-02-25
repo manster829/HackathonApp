@@ -2,6 +2,7 @@ var canvas;
 var obstacles = [];
 var Sobstacles = [];
 var Score = 0;
+var TopScore = 0;
 var Gmo = false;
 var x = document.getElementById("myBtn");
 
@@ -59,6 +60,8 @@ function draw() {
   background(0);
   textSize(32);
   text("Score: " + Score, window.innerWidth -500, window.innerHeight - (window.innerHeight * 0.9));
+  text("Top Score: " + TopScore, window.innerWidth -500, window.innerHeight - 50);
+
   fill(250, 100, 153)
   Instance.show();
   Instance.update();
@@ -102,7 +105,11 @@ function draw() {
     }
 
     if (frameCount % 200 == 0) {
-Score++;
+        Score++;
+        if(Score > TopScore){
+          TopScore = Score;
+        }
+
     }
 
 
