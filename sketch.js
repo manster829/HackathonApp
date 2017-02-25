@@ -65,7 +65,6 @@ function draw() {
 
   //Triangle.show();
   //Triangle.update();
-  console.log(Sobstacles.length);
   for (var i = obstacles.length-1; i >= 0; i--) {
       obstacles[i].show();
       obstacles[i].update();
