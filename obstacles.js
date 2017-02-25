@@ -17,7 +17,8 @@ this.meme = 65 + random(100);
 
    }
    this.hits = function(Instance) {
-     if (Instance.y > this.y - 60) {
+     if (Instance.y > this.y - 60 || Instance.y < 0 + this.meme ) {
+
      if (Instance.x > this.x && Instance.x < this.x + 50) {
          //this.highlight = true;
          return true;
