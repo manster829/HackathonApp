@@ -4,9 +4,12 @@ function SkyObj(){
   this.Tspeed = 10;
   this.meme = random(50);
   this.r = 32 + this.meme;
+  this.q=int(random(0,255));
+this.g=int(random(0,255));
+this.b=int(random(0,255));
 
   this.show = function(){
-    fill(255);
+    fill(this.q,this.g,this.b);
     ellipse(this.x, this.y, this.r , this.r);
 
   }

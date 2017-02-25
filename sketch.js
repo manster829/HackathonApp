@@ -4,12 +4,14 @@ var Sobstacles = [];
 var Score = 0;
 var TopScore = 0;
 var Gmo = false;
+var diffMult;
 var x = document.getElementById("myBtn");
 
 function setup() {
   canvas = createCanvas(window.innerWidth, window.innerHeight);
   Instance = new Runner();
   Terrain = new Terrain();
+  SpeedBoost = new PwrUp();
 //  Triangle = new Obstacle();
   obstacles.push(new Obstacle());
   Sobstacles.push(new SkyObj());
@@ -66,6 +68,7 @@ function draw() {
   Instance.show();
   Instance.update();
 
+
   //Triangle.show();
   //Triangle.update();
   for (var i = obstacles.length-1; i >= 0; i--) {
@@ -108,22 +111,28 @@ function draw() {
         Score++;
         if(Score > TopScore){
           TopScore = Score;
+
         }
 
     }
 
 
 
-
   Terrain.show();
-
-}
-function mouseClicked() {
-//  console.log("LMAO");
-  reseter();
-
+  if (Score == 5 || Score == 10 || Score == 15) {
+    Harder();
   }
 
+}
+// function mouseClicked() {
+// //  console.log("LMAO");
+//   reseter();
+//
+//   }
+function Harder(){
+  diffMult;
+  //SpeedBoost.update();
+}
 
 function keyPressed() {
   if (key == ' ') {

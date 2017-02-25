@@ -8,7 +8,7 @@ function Runner(){
 
 
   this.show = function() {
-   fill(255);
+   fill('green');
    ellipse(this.x, this.y, 32, 32);
  }
 
